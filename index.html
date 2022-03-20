@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .nav-link.active{
+  	color: #ffbe88 !important;
+  }
+  .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+	color: #ffbe88 !important;
+  }
+  .nav-link {
+  	color: #f8f9f2 !important;
+    font-weight: 400;
+  }
+  .nav-item{
+	padding: 0em 1em;
+  }
+  .navbar-brand{
+	color: #f6c18f;
+	display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    white-space: nowrap;
+    padding-right: 30px;
+  }
+  .container-fluid{
+    max-width: 1200px;
+  }
+  .bg-m0001{
+  	background-color: rgba(47,35,69,1);
+  }
+  .in-card-001 .text-box{
+	width: 560px;
+  }
+  .navbar-toggler, navbar-toggler-icon{
+  	color: white !important;
+  }
+  .auto-image{
+  	width: 100%;
+    display: block;
+  }
+  .card-001{
+    min-height: 650px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .bg-son01{
+  	background-image: linear-gradient(to bottom, rgba(70,55,101,1), rgba(45,35,67,1));
+  }
+  .text-title{
+    margin-bottom: 0.6em;
+  	color: #ffbe88;
+    font-size: 35px;
+    font-family: 'Quicksand',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+  }
+  .text-detail{
+  	color: #ffffff;
+    font-size: 20px;
+    font-family: 'Open Sans',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 400;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+  }
+  .bg-son01 .text-title{
+  	color: #ffbe88;
+  }
+  .bg-son01 .text-detail{
+  	color: #ffffff;
+  }
+  .bg-white .text-title{
+  	color: #2d2343;
+  }
+  .bg-white .text-detail{
+  	color: #2d2343;
+  }
+  .center-items{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+   }
+   .auto-fit-image{
+	height: 800px;object-fit: cover;
+   }
+  @media screen and (max-width: 1200px){
+    .navbar-brand {
+        text-indent: -9999px;
+    }
+    .flex-cr{
+      display: flex;
+      flex-direction: column-reverse;
+      align-content: center;
+      align-items: center;
+    }
+    .flex-c{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+    }
+    .in-card-001 .text-box{
+		width: 100%;
+		margin-bottom: 5em;
+		margin-top: 6em;
+    }
+	.in-card-001 .text-box-2{
+		width: 100%;
+		margin-bottom: 1em;
+		margin-top: 1em;
+    }
+    .bg-m0001{
+      background-color: rgb(47 35 69 / 0%);
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+	.auto-fit-image{
+		height: 400px;
+	}
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-xl navbar-dark bg-m0001" style="padding: 1.7em 0em;">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">SơnDepZai</a>
+		 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav" style="background-color: rgba(47,35,69,1);">
+		  <ul class="navbar-nav ms-auto text-center">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Home</a>
+			</li>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">About us</a>
+			</li>
+		  </ul>
+		</div>
+  </div>
+</nav>
+
+<div class="card-001 bg-son01" style="background-color: #2D2343;">
+  <div class="in-card-001 row p-5 flex-cr">
+    <div class="col-md-6 center-items" style="">
+      <img class="auto-image" style="max-width: 565px;" src="https://thumb.tildacdn.com/tild3463-3062-4635-a461-656362646166/-/format/webp/Group_1.png">
+    </div>
+    <div class="col-md-6 center-items" style="color: #ffffff;">
+		<div class="text-box">
+		  <div class="text-title">MomMe</div>
+		  <div class="text-detail">Ứng dụng tích hợp công nghệ Internet vạn vật và Trí tuệ nhân tạo để chăm sóc thai phụ toàn diện.</div>
+		</div>
+	</div>
+  </div>
+</div>
+
+<div class="card-001 bg-white" style="background-color: #FAFAFC;">
+  <div class="in-card-001 row p-5 flex-c">
+  	<div class="col-md-6 center-items" style="color: #ffffff;">
+		<div class="text-box">
+			<div class="text-title">Đơn giản hóa kế hoạch mang thai</div>
+			<div class="text-detail">Với sự hỗ trợ của công nghệ AI và IoT, MomMe là một trợ lý đắc lực trong việc theo sát kế hoạch mang thai, giúp bạn theo dõi thói quen sinh hoạt một cách đơn giản và thông minh.</div>
+		</div>
+	</div>
+    <div class="col-md-6 center-items" style="">
+      <img class="auto-image" src="https://images.onhealth.com/images/slideshow/what-are-the-dos-and-donts-during-the-second-trimester-of-pregnancy/what-are-the-dos-and-donts-during-the-second-trimester-of-pregnancy-s1-2nd-13-weeks-28-weeks.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="card-001 bg-son01" style="background-color: #2D2343;">
+  <div class="in-card-001 row flex-cr">
+    <div class="col-md-6 center-items" style="">
+      <img class="auto-image auto-fit-image" src="https://cdn.cdnparenting.com/articles/2018/01/284888609-H.webp">
+    </div>
+    <div class="col-md-6 center-items p-5" style="color: #ffffff;">
+		<div class="text-box">
+		  <div class="text-title">Ngăn chặn những rủi ro có thể xảy ra khi mang thai</div>
+		  <div class="text-detail">Bằng công nghệ theo dõi chế độ dinh dưỡng, chất lượng giấc ngủ, mức độ căng thẳng, chế độ vận động và các thông số khác, MomMe có khả năng dự đoán và đưa ra những biện pháp ngăn chặn những rủi ro về khi mang thai.</div>
+		</div>
+	</div>
+  </div>
+</div>
+
+<div class="card-001 bg-white" style="background-repeat: no-repeat;background-image: url(https://i.imgur.com/APRd0b6.jpg);">
+  <div class="in-card-001 row p-5 flex-c" style="min-height: 37em;">
+  	<div class="col-md-6 center-items" style="color: #ffffff;">
+		<div class="text-box" style="width: 100%;">
+			<div class="text-title">Hiểu hơn về những triệu chứng của bạn</div>
+			<div class="text-detail">MomMe sẽ giải đáp những thắc mắc của bạn về những triệu chứng được coi là bình thường và sẽ giúp bạn kết nối với chuyên gia với những triệu chứng phức tạp hơn.</div>
+		</div>
+	</div>
+    <div class="col-md-6 center-items" style="">
+      
+    </div>
+  </div>
+</div>
+
+<div class="card-001 bg-white" style="background-color: #FAFAFC;">
+  <div class="in-card-001 row p-5 flex-c" style="min-height: 37em;">
+  	<div class="col-md-6 center-items">
+		<div class="row">
+			<div class="col-md-2">
+				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.terrainhopperusa.com/wp-content/uploads/2019/01/avatar-woman.png">
+			</div>
+			<div class="col-md-10">
+				<div class="text-box-2">
+					<div class="text-title">Cá nhân hóa MomMe</div>
+					<div class="text-detail">Với giao diện người dùng đơn giản, thân thiện và khả năng cá nhân hóa vượt trội, các bác sĩ và người dùng có thể thiết đặt lệnh riêng để MomMe có thể đem đến trải nghiệm phù hợp với sở thích của bạn nhất.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="col-md-6 center-items" style="">
+		<div class="row">
+			<div class="col-md-2">
+				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.fitbit.com/global/content/dam/fitbit/global/pdp/devices/sense/hero-static/sage-grey/sense-sage-gray-device-3qt.png">
+			</div>
+			<div class="col-md-10">
+				<div class="text-box-2">
+					<div class="text-title">Kết nối vạn vật</div>
+					<div class="text-detail">Đồng hồ thông minh không có chế độ thai kỳ? Không sao, MomMe ở đây để khắc phục ! Đồng bộ hóa thiết bị của bạn để có thông tin chi tiết về hoạt động phù hợp với thai kỳ của bạn.</div>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+ 
+  <!-- Section: Links  -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i> MoomMe</h6>
+          <p>Tập đoàn công nghệ lớn nhất do sinh viên Bách Khoa lập lên :V</p>
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+          <p><a href="#!" class="text-reset">MoomMe</a></p>
+        </div>
+
+        <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Bách Khoa IT1, Đại Cồ Việt</p>
+          <p><i class="fas fa-envelope me-3"></i> MoomMe@backkhoa.com</p>
+          <p><i class="fas fa-phone me-3"></i> + 09 999 999 99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold">MoomMe</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</body>
+</html>
