@@ -40,10 +40,6 @@
   .navbar-toggler, navbar-toggler-icon{
   	color: white !important;
   }
-  .auto-image{
-  	width: 100%;
-    display: block;
-  }
   .card-001{
     min-height: 650px;
     position: relative;
@@ -91,9 +87,49 @@
 	align-items: center;
 	justify-content: center;
    }
+   @keyframes displayImage {
+	  from {
+		opacity: 0;
+		transform: scale(0);
+	  }
+	  to {
+		opacity: 1;
+		transform: scale(1);
+	  }
+	}
+	.auto-image{
+		width: 100%;
+		display: block;
+		animation-name: displayImage;
+		animation-duration: 2.5s;
+		animation-timing-function: cubic-bezier(.19,1,.22,1);
+		animation-property: opacity,transform;
+		-webkit-animation-name: displayImage;
+		-webkit-animation-duration: 2.5s;
+		-webkit-animation-timing-function: cubic-bezier(.19,1,.22,1);
+		-webkit-animation-property: opacity,transform;
+	}
    .auto-fit-image{
 	height: 800px;object-fit: cover;
    }
+   .btn-son001{
+	color: #ffffff;
+    font-size: 1.5em;
+	padding: 1em;
+    font-family: 'Quicksand',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 600;
+    border-width: 1px;
+    border-radius: 30px;
+    background-color: #3f51b5;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+   }
+   .btn-son001:hover {
+    color: #ffffff;
+	}
   @media screen and (max-width: 1200px){
     .navbar-brand {
         text-indent: -9999px;
@@ -214,10 +250,10 @@
   <div class="in-card-001 row p-5 flex-c" style="min-height: 37em;">
   	<div class="col-md-6 center-items">
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4 col-lg-5 col-xl-4 center-items">
 				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.terrainhopperusa.com/wp-content/uploads/2019/01/avatar-woman.png">
 			</div>
-			<div class="col-md-10">
+			<div class="col-md-8 col-lg-7 col-xl-8 center-items">
 				<div class="text-box-2">
 					<div class="text-title">Cá nhân hóa MomMe</div>
 					<div class="text-detail">Với giao diện người dùng đơn giản, thân thiện và khả năng cá nhân hóa vượt trội, các bác sĩ và người dùng có thể thiết đặt lệnh riêng để MomMe có thể đem đến trải nghiệm phù hợp với sở thích của bạn nhất.</div>
@@ -227,10 +263,10 @@
 	</div>
     <div class="col-md-6 center-items" style="">
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-md-4 col-lg-5 col-xl-4 center-items">
 				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.fitbit.com/global/content/dam/fitbit/global/pdp/devices/sense/hero-static/sage-grey/sense-sage-gray-device-3qt.png">
 			</div>
-			<div class="col-md-10">
+			<div class="col-md-8 col-lg-7 col-xl-8 center-items">
 				<div class="text-box-2">
 					<div class="text-title">Kết nối vạn vật</div>
 					<div class="text-detail">Đồng hồ thông minh không có chế độ thai kỳ? Không sao, MomMe ở đây để khắc phục ! Đồng bộ hóa thiết bị của bạn để có thông tin chi tiết về hoạt động phù hợp với thai kỳ của bạn.</div>
@@ -241,6 +277,26 @@
   </div>
 </div>
 
+<div class="card-001 bg-son01" style="background-color: #2D2343;min-height: 450px;">
+	<h1 class="text-center text-white mt-5">Chúng tôi có thể làm gì?</h1>
+	<div class="in-card-001 row p-5 flex-c">
+		<div class="col-md-6 center-items" style="margin-top: 1em;">
+		  <a href="#" class="btn btn-son001 btn-lg">Xây dựng môi trường lành mạnh cho mẹ & bé</a>
+		</div>
+		<div class="col-md-6 center-items" style="margin-top: 1em;">
+		  <a href="#" class="btn btn-son001 btn-lg">Hiểu hơn về những vấn đề gặp phải khi mang thai</a>
+		</div>
+	</div>
+	<div class="in-card-001 row p-5 flex-c">
+		<div class="col-md-6 center-items" style="margin-top: 1em;">
+		  <a href="#" class="btn btn-son001 btn-lg">Hỗ trợ IoT giúp nâng cao hiệu quả mang thai</a>
+		</div>
+		<div class="col-md-6 center-items" style="margin-top: 1em;">
+		  <a href="#" class="btn btn-son001 btn-lg">Trợ lý thông minh cho mẹ bầu</a>
+		</div>
+	</div>
+</div>
+
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted">
  
@@ -249,19 +305,19 @@
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
         <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i> MoomMe</h6>
+          <h6 class="text-uppercase fw-bold mb-4"><i class="fas fa-gem me-3"></i> MomMe</h6>
           <p>Tập đoàn công nghệ lớn nhất do sinh viên Bách Khoa lập lên :V</p>
         </div>
 
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">Products</h6>
-          <p><a href="#!" class="text-reset">MoomMe</a></p>
+          <p><a href="#!" class="text-reset">MomMe</a></p>
         </div>
 
         <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
           <p><i class="fas fa-home me-3"></i>Bách Khoa IT1, Đại Cồ Việt</p>
-          <p><i class="fas fa-envelope me-3"></i> MoomMe@backkhoa.com</p>
+          <p><i class="fas fa-envelope me-3"></i> MomMe@hust.edu.vn</p>
           <p><i class="fas fa-phone me-3"></i> + 09 999 999 99</p>
         </div>
       </div>
@@ -272,7 +328,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2022 Copyright:
-    <a class="text-reset fw-bold">MoomMe</a>
+    <a class="text-reset fw-bold">MomMe</a>
   </div>
   <!-- Copyright -->
 </footer>
