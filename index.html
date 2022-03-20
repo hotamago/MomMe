@@ -5,198 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-	/*!
-* inView.js 1.1
-*
-* Copyright 2019, Mario Duarte http://marioduarte.co.uk
-* Released under the GLP-2.0 license
-*
-* Date: Mon Feb 11 2019
-*/
-
-"use strict";$.fn.inView=function(t){var o=1<arguments.length&&void 0!==arguments[1]?arguments[1]:0,e={};e.top=$(window).scrollTop(),e.bottom=e.top+$(window).height();var p={};switch(p.top=this.offset().top+o,p.bottom=p.top+this.outerHeight(),t){case"bottomOnly":return p.bottom<=e.bottom&&p.bottom>=e.top;case"topOnly":return p.top<=e.bottom&&p.top>=e.top;case"both":default:return p.top>=e.top&&p.bottom<=e.bottom}};
-  </script>
- <style>
-  .nav-link.active{
-  	color: #ffbe88 !important;
-  }
-  .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
-	color: #ffbe88 !important;
-  }
-  .nav-link {
-  	color: #f8f9f2 !important;
-    font-weight: 400;
-  }
-  .nav-item{
-	padding: 0em 1em;
-  }
-  .navbar-brand{
-	color: #f6c18f;
-	display: inline-block;
-    font-size: 24px;
-    font-weight: 400;
-    white-space: nowrap;
-    padding-right: 30px;
-  }
-  .container-fluid{
-    max-width: 1200px;
-  }
-  .bg-m0001{
-  	background-color: rgba(47,35,69,1);
-  }
-  .in-card-001 .text-box{
-	width: 560px;
-  }
-  .navbar-toggler, navbar-toggler-icon{
-  	color: white !important;
-  }
-  .card-001{
-    min-height: 650px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  .bg-son01{
-  	background-image: linear-gradient(to bottom, rgba(70,55,101,1), rgba(45,35,67,1));
-  }
-  .text-title{
-    margin-bottom: 0.6em;
-  	color: #ffbe88;
-    font-size: 35px;
-    font-family: 'Quicksand',Arial,sans-serif;
-    line-height: 1.55;
-    font-weight: 400;
-    background-position: center center;
-    border-color: transparent;
-    border-style: solid;
-  }
-  .text-detail{
-  	color: #ffffff;
-    font-size: 20px;
-    font-family: 'Open Sans',Arial,sans-serif;
-    line-height: 1.55;
-    font-weight: 400;
-    background-position: center center;
-    border-color: transparent;
-    border-style: solid;
-  }
-  .bg-son01 .text-title{
-  	color: #ffbe88;
-  }
-  .bg-son01 .text-detail{
-  	color: #ffffff;
-  }
-  .bg-white .text-title{
-  	color: #2d2343;
-  }
-  .bg-white .text-detail{
-  	color: #2d2343;
-  }
-  .center-items{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-   }
-   @keyframes displayImage {
-	  from {
-		opacity: 0;
-		transform: scale(0);
-	  }
-	  to {
-		opacity: 1;
-		transform: scale(1);
-	  }
-	}
-	.auto-image{
-		width: 100%;
-		display: block;
-	}
-	.aniSon{
-		animation-name: displayImage;
-		animation-duration: 2s;
-		animation-timing-function: cubic-bezier(.19,1,.22,1);
-		animation-property: opacity,transform;
-		-webkit-animation-name: displayImage;
-		-webkit-animation-duration: 2s;
-		-webkit-animation-timing-function: cubic-bezier(.19,1,.22,1);
-		-webkit-animation-property: opacity,transform;
-	}
-   .auto-fit-image{
-	height: 800px;object-fit: cover;
-   }
-   .btn-son001{
-	color: #ffffff;
-    font-size: 1.5em;
-	padding: 1em;
-    font-family: 'Quicksand',Arial,sans-serif;
-    line-height: 1.55;
-    font-weight: 600;
-    border-width: 1px;
-    border-radius: 30px;
-    background-color: #3f51b5;
-    background-position: center center;
-    border-color: transparent;
-    border-style: solid;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
-	transition-duration: 2s;
-	transition-timing-function: cubic-bezier(.19,1,.22,1);
-	transition-property: opacity,transform;
-	-webkit-transition-duration: 2s;
-	-webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
-	-webkit-transition-property: opacity,transform;
-   }
-   .btn-son001:hover {
-    color: #ffffff;
-	transition-duration: 2s;
-	transition-timing-function: cubic-bezier(.19,1,.22,1);
-	transition-property: opacity,transform;
-	-webkit-transition-duration: 2s;
-	-webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
-	-webkit-transition-property: opacity,transform;
-	
-	transform: scale(1.2);
-	}
-	
-  @media screen and (max-width: 1200px){
-    .navbar-brand {
-        text-indent: -9999px;
-    }
-    .flex-cr{
-      display: flex;
-      flex-direction: column-reverse;
-      align-content: center;
-      align-items: center;
-    }
-    .flex-c{
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-    }
-    .in-card-001 .text-box{
-		width: 100%;
-		margin-bottom: 5em;
-		margin-top: 6em;
-    }
-	.in-card-001 .text-box-2{
-		width: 100%;
-		margin-bottom: 1em;
-		margin-top: 1em;
-    }
-    .bg-m0001{
-      background-color: rgb(47 35 69 / 0%);
-      position: absolute;
-      width: 100%;
-      z-index: 1;
-    }
-	.auto-fit-image{
-		height: 400px;
-	}
-  }
-  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/jquery-inview.js"></script>
 </head>
 <body>
 
@@ -223,7 +35,7 @@
 <div class="card-001 bg-son01 son-ani-01" style="background-color: #2D2343;">
   <div class="in-card-001 row p-5 flex-cr">
     <div class="col-md-6 center-items" style="">
-      <img class="auto-image" style="max-width: 565px;" src="https://thumb.tildacdn.com/tild3463-3062-4635-a461-656362646166/-/format/webp/Group_1.png">
+      <img class="auto-image" style="max-width: 565px;" src="image/Group_1.webp">
     </div>
     <div class="col-md-6 center-items" style="color: #ffffff;">
 		<div class="text-box">
@@ -243,7 +55,7 @@
 		</div>
 	</div>
     <div class="col-md-6 center-items" style="">
-      <img class="auto-image" src="https://images.onhealth.com/images/slideshow/what-are-the-dos-and-donts-during-the-second-trimester-of-pregnancy/what-are-the-dos-and-donts-during-the-second-trimester-of-pregnancy-s1-2nd-13-weeks-28-weeks.jpg">
+      <img class="auto-image" src="image/what-are-the-dos-and-donts-during-the-second-trimester-of-pregnancy-s1-2nd-13-weeks-28-weeks.webp">
     </div>
   </div>
 </div>
@@ -251,7 +63,7 @@
 <div class="card-001 bg-son01 son-ani-01" style="background-color: #2D2343;">
   <div class="in-card-001 row flex-cr">
     <div class="col-md-6 center-items" style="">
-      <img class="auto-image auto-fit-image" src="https://cdn.cdnparenting.com/articles/2018/01/284888609-H.webp">
+      <img class="auto-image auto-fit-image" src="image/284888609-H.webp">
     </div>
     <div class="col-md-6 center-items p-5" style="color: #ffffff;">
 		<div class="text-box">
@@ -262,7 +74,7 @@
   </div>
 </div>
 
-<div class="card-001 bg-white son-ani-01" style="background-repeat: no-repeat;background-image: url(https://i.imgur.com/APRd0b6.jpg);">
+<div class="card-001 bg-white son-ani-01" style="background-repeat: no-repeat;background-image: url(image/APRd0b6.webp);">
   <div class="in-card-001 row p-5 flex-c" style="min-height: 37em;">
   	<div class="col-md-6 center-items" style="color: #ffffff;">
 		<div class="text-box" style="width: 100%;">
@@ -281,7 +93,7 @@
   	<div class="col-md-6 center-items">
 		<div class="row">
 			<div class="col-md-4 col-lg-5 col-xl-4 center-items">
-				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.terrainhopperusa.com/wp-content/uploads/2019/01/avatar-woman.png">
+				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="image/avatar-woman.webp">
 			</div>
 			<div class="col-md-8 col-lg-7 col-xl-8 center-items">
 				<div class="text-box-2">
@@ -294,7 +106,7 @@
     <div class="col-md-6 center-items" style="">
 		<div class="row">
 			<div class="col-md-4 col-lg-5 col-xl-4 center-items">
-				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="https://www.fitbit.com/global/content/dam/fitbit/global/pdp/devices/sense/hero-static/sage-grey/sense-sage-gray-device-3qt.png">
+				<img class="mr-3 mt-3 auto-image" style="max-width: 10em;" src="image/sense-sage-gray-device-3qt.webp">
 			</div>
 			<div class="col-md-8 col-lg-7 col-xl-8 center-items">
 				<div class="text-box-2">
@@ -364,34 +176,6 @@
 </footer>
 <!-- Footer -->
 
-<script>
-	function checkinViewPlay(object_this){
-		let hasThisClass = $(object_this).hasClass("aniSon");
-		let inViewOk = ($(object_this).inView("topOnly") || $(object_this).inView("bottomOnly"));
-		let SumStatus = (inViewOk && !hasThisClass);
-		if(SumStatus) $(object_this).addClass("aniSon");
-	}
-	function animationLoaded(){
-		$('.son-ani-01').each(function(){
-			checkinViewPlay(this);
-		});
-		$('.auto-image').each(function(){
-			checkinViewPlay(this);
-		});
-		$('.text-box').each(function(){
-			checkinViewPlay(this);
-		});
-		$('.text-box-2').each(function(){
-			checkinViewPlay(this);
-		});
-		$('.btn').each(function(){
-			checkinViewPlay(this);
-		});
-	}
-	window.onload = animationLoaded;
-	$(window).scroll(function() {
-		animationLoaded();
-	});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
