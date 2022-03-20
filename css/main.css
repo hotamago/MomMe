@@ -27,6 +27,20 @@
   color: white !important;
 }
 
+/* section element */
+.section-title {
+  margin-bottom: 80px;
+  text-align: center;
+  position: relative;
+}
+section {
+  display: block;
+}
+.spad {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
 /* div parent element */
 .container-fluid {
   max-width: 1200px;
@@ -175,6 +189,21 @@
   -webkit-transition-property: opacity, transform;
 
   transform: scale(1.2);
+}
+
+/* flex */
+.flex-s-c {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Background */
+.bg-c-n-f {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* Son dep zai Media */

@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-m0001 son-ani-01" style="padding: 1.7em 0em;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">MomMe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="background-color: rgba(47,35,69,1);">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/index.html" id="nav-linkHome">Home</a>
+                </li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us.html" id="nav-linkAboutUs">About us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    if(window.location.pathname.indexOf("index.html") > -1){
+        document.getElementById("nav-linkHome").classList.add("active");
+    }
+    if(window.location.pathname.indexOf("about-us.html") > -1){
+        document.getElementById("nav-linkAboutUs").classList.add("active");
+    }
+</script>
